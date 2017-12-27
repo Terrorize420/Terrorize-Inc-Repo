@@ -1,16 +1,299 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.demo.kodi" name="Demonstration repository" version="0.0.2" provider-name="Mafarricos">
-	<extension point="xbmc.addon.repository" name="Demonstration Add-on Repository">
-		<info compressed="false">http://raw.github.com/Mafarricos/Mafarricos-kodi-demo-repo/master/addons.xml</info>
-		<checksum>http://raw.github.com/Mafarricos/Mafarricos-kodi-demo-repo/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.github.com/Mafarricos/Mafarricos-kodi-demo-repo/master/repo/</datadir>
+<addon id="plugin.program.indigo" version="3.0.2" name="Indigo" author="tvaddons">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+	</requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable </provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Indigo is your gateway to the world of unofficial Kodi addons!</summary>
+        <description lang="en">Indigo is your gateway to the world of unofficial Kodi addons! Please visit www.tvaddons.co for support.</description>
+        <disclaimer lang="en">Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation. Furthermore, any software, addons, or products offered by us will receive no support in official Kodi channels, including the Kodi forums and various social networks.</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <forum>https://www.tvaddons.co/forums</forum>
+        <website>https://www.tvaddons.co</website>
+        <source>https://github.com/tvaddonsco/plugin.program.indigo</source>
+    </extension>
+</addon>
+
+<addon id="plugin.video.sportie"
+         name="Sportie"
+         version="2.00.008"
+         provider-name="Echo Coder">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="repository.colossus" />
+	<import addon="script.module.httplib2" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.module.liveresolver" />
+    <import addon="script.module.urlresolver" />
+    <import addon="script.module.echo" />
+    <import addon="script.video.F4mProxy" />
+    <import addon="plugin.video.f4mTester" />
+    <import addon="plugin.video.SportsDevil" />
+    <import addon="program.plexus" version="0.1.4" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en"></summary>
+    <description lang="en">Sportie is a multi scraping/playlist sports addon that scrapes numerous websites to bring you the most up to date streams every time!
+
+-Soccer Streams Support
+-Reddit Support
+-Plus Much More!</description>
+    <disclaimer lang="en">Sportie does not host any of the streams provided within the addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+        <screenshot>resources/art/screenshots/screenshot-01.jpg</screenshot>
+        <screenshot>resources/art/screenshots/screenshot-02.jpg</screenshot>
+        <screenshot>resources/art/screenshots/screenshot-03.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.uiptv"
+       name="Ultimate IPTV"
+       version="1.0.5"
+       provider-name="Whitecream">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.5.7" />
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL 2.0</license>
+        <summary lang="en">Ultimate IPTV</summary>
+        <description lang="en">Access the IPTV lists from a blog. Daily new links.</description>
+    </extension>
+</addon>
+
+<addon id="plugin.video.uwc"
+       name="Ultimate Whitecream"
+       version="1.1.54"
+       provider-name="Whitecream">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.urlresolver"  version="3.0.12" />
+        <import addon="script.video.F4mProxy" version="2.5.7" />
+    </requires>
+    <extension point="xbmc.python.pluginsource"
+               library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL 2.0</license>
+        <summary lang="en">Watch [COLOR red][B]ADULT[/B][/COLOR] Movies with Ultimate WhiteCream</summary>
+        <description lang="en">Watch [COLOR red][B]ADULT[/B][/COLOR] Movies with Ultimate WhiteCream
+
+For support, visit: [COLOR hotpink]http://bit.ly/uwc-support[/COLOR]
+Follow us on twitter: [COLOR blue]Whitecream_UWC[/COLOR]</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+        <forum>http://bit.ly/uwc-support</forum>
+    </extension>
+</addon>
+
+<addon id="plugin.video.xxx-o-dus"
+	     name="XXX-O-DUS"
+	     version="3.00.033"
+	     provider-name="Echo Coder">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="script.module.echo"/>
+    <import addon="script.xxxodus.artwork"/>
+    <import addon="script.xxxodus.scrapers"/>
+    <import addon="script.module.urlresolver"/>
+    <import addon="script.module.urlresolver.xxx"/>
+    <import addon="script.module.pyxbmct"/>
+    <import addon="repository.colossus"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="startup">
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">[B]Massive Credit to @_PYDEV_ KingKong for the pyxbmct work to provide a stunning interface to view the dialogs in this addon and the GitHub issues! Also A huge credit to jokstergfx for the icons and fanarts in this addon and many others! Thank you![/B]</summary>
+    <description lang="en">[COLOR white]XXX-O-DUS scrapes many websites to bring you hundreds of thousands of videos. Features of the addon include, history monitoring, favourites, downloadable videos, parental controls and more![/COLOR]
+
+[COLOR white]Websites Include: Porn.com, PornHD.com, Chaturbate.com, RedTube.com, Xhamster.com, YouPorn.com, PornFun.com, Motherless.com,Porn00.org, Spankbang.com, Virtualpornstars.com, Watchxxxfree.com, Perfectgirls.net, XNXX.com and many more.[/COLOR]</description>
+    <disclaimer lang="en">The pages of this addon are designed for ADULTS only and may include pictures and materials that some viewers may find offensive. If you are under the age of 18, if such material offends you or if it is illegal to view such material in your community please exit the addon.</disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+    <website>https://github.com/Colossal1/plugin.video.xxx-o-dus</website>
+    <forum>https://github.com/Colossal1/plugin.video.xxx-o-dus</forum>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="repository.colossus" name="[COLOR gold]Colossus Repository[/COLOR]" version="999.999.9" provider-name="Colossal">
+    <extension point="xbmc.addon.repository" name="[COLOR gold]Colossus Repository[/COLOR]">
+    <dir>
+        <info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+        <checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+    </dir>
+        <info compressed="false">https://raw.githubusercontent.com/covenantkodi/repository.colossus/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/covenantkodi/repository.colossus/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/covenantkodi/repository.colossus/master/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Home Of 3rd Party Addons</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.TerrorizeInc.kodi" name="Terrorize Inc Repo" version="0.0.1" provider-name="Terrorize420">
+	<extension point="xbmc.addon.repository" name="TerrorizeInc Add-on Repository">
+		<info compressed="false">http://raw.github.com/Terrorize420/Terrorize-Inc_Repo/master/addons.xml</info>
+		<checksum>http://raw.github.com/Terrorize420/Terrorize-Inc_Repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">http://raw.github.com/Terrorize420/Terrorize-Inc_Repo/master/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<summary>Demonstration Addon</summary>
-		<description>Addon Description</description>
+		<summary>TerrorizeInc Addon</summary>
+		<description>Made This Just For You Brad The Butt Baby</description>
 		<disclaimer></disclaimer>
 		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.xbmchub" name="TVADDONS.CO Add-on Repository" version="3.0.0" provider-name="tvaddons">
+	<extension point="xbmc.addon.repository" name="TVADDONS.CO Add-on Repository">
+	<dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-resolvers-repo/raw/master/zips/</datadir>
+	</dir>
+
+    <dir>
+		<info compressed="false">https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml</info>
+		<checksum>https://github.com/tvaddonsco/tva-release-repo/raw/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://github.com/tvaddonsco/tva-release-repo/raw/master/</datadir>
+    </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Unofficial Kodi Addons from TVADDONS.CO</summary>
+		<description>Unofficial Kodi Addons from the TVADDONS.CO Add-on Repository. Please visit www.tvaddons.co for support!
+
+Kodi is a registered trademark of the XBMC Foundation. We are not connected to or in any other way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</description>
+         <disclaimer>TVADDONS.CO did not make all the add-ons in this repository and is not responsible for their content.</disclaimer>
+		<platform>all</platform>
+                <forum>https://www.tvaddons.co/forums</forum>
+                <website>https://www.tvaddons.co</website>
+	</extension>
+</addon>
+
+<addon id="script.covenant.artwork" version="1.0.3" name="Covenant Artwork" provider-name="Covenant">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Covenant Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.covenant.metadata" version="1.0.2" name="Covenant Metadata" provider-name="Covenant">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Covenant Addon</summary>
+		<description>Metadata for Covenant are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.deaths.themepak" version="0.0.14" name="DS Themepak" provider-name="MR Blamo">
+    <requires>
+        <import addon="kodi.resource" version="1.0.0"/>
+    </requires>
+    <extension point="kodi.resource.images" compile="false" type="themepak" />
+    <extension point="xbmc.addon.metadata">
+        <summary>These are Themes for the Death Streams Addon</summary>
+        <description>Themes are maintained separately to make distribution of the the addon itself easier and faster credit to k3l3vra for some good themes.</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.covenant" name="Covenant Module" version="1.00.025" provider-name="Covenant">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Covenant</summary>
+	</extension>
+</addon>
+
+<addon id="script.module.deathstreams" name="Mr Blamos Common Libraries" version="0.1.9" provider-name="Mr Blamo">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Credit to TKnorris</summary>
+	</extension>
+</addon>
+
+<addon id="script.module.echo" name="Echo Libraries" version="1.00.003" provider-name="Echo Coder">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.requests" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Forked from TK Norris Shared Module. Reusable Modules used by several of Echo's addons</summary>
+	</extension>
+</addon>
+
+<addon id="script.xxxodus.artwork" version="1.00.018" name="XXXODUS Artwork" provider-name="Echo Coder">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Artwork for XXXODUS</summary>
+		<description>Artwork for XXXODUS is maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.xxxodus.scrapers" name="XXXODUS Scrapers" version="1.00.025" provider-name="Echo Coder">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Scrapers for use in XXXODUS</summary>
 	</extension>
 </addon>
 </addons>
